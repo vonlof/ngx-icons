@@ -1,0 +1,38 @@
+{
+  "srcPath": "./apps/demo/src/icons/svg",
+  "outputPath": "./apps/demo/src/icons/generated",
+  "barrel": true,
+  "suffix": "",
+  "svgoConfig": {
+    "plugins": [
+      {
+        "name": "preset-default",
+        "params": {
+          "overrides": {
+            "removeViewBox": false
+          }
+        }
+      },
+      {
+        "name": "removeXMLNS"
+      },
+      {
+        "name": "prefixIds"
+      },
+      {
+        "name": "removeAttrs",
+        "params": {
+          "attrs": ["fill", "color", "width", "height"]
+        }
+      },
+      {
+        "name": "addAttributesToSVGElement",
+        "params": {
+          "attribute": {
+            "fill": "currentColor"
+          }
+        }
+      }
+    ]
+  }
+}

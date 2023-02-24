@@ -1,0 +1,21 @@
+{
+  "prefix": "solid",
+  "svgoConfig": {
+    "plugins": [
+      {
+        "name": "removeAttrs",
+        "params": {
+          "attrs": ["fill", "color", "width", "height"]
+        }
+      },
+      {
+        "name": "addAttributesToSVGElement",
+        "params": {
+          "attribute": {
+            "fill": "currentColor"
+          }
+        }
+      }
+    ]
+  }
+}

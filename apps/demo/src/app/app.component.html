@@ -1,0 +1,32 @@
+<nav class="py-5 border-b border-gray-800">
+  <div class="max-w-6xl mx-auto px-8 flex justify-end">
+    <a href="">
+      <ngx-icon name="logo-github-mark" class="text-white h-5"></ngx-icon>
+    </a>
+  </div>
+</nav>
+<header
+  class="py-20 w-full flex justify-center items-center border-b border-gray-800"
+>
+  <div class="text-center">
+    <h1
+      class="text-5xl pb-6 font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500"
+    >
+      ngx-icons
+    </h1>
+    <p class="text-gray-50 max-w-xl text-lg">
+      The all-in-one icon library for Angular. This allows you to generate and
+      use icons from custom icon sets with a single icon component.
+    </p>
+  </div>
+</header>
+<div class="max-w-6xl mx-auto p-8">
+  <ul class="grid grid-cols-6 gap-4">
+    <li
+      class="border border-gray-700 rounded p-4 flex items-center justify-center aspect-square hover:bg-gray-800"
+      *ngFor="let icon of icons"
+    >
+      <ngx-icon [name]="icon.name" class="text-gray-400 h-10"></ngx-icon>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,30 @@
+:host {
+  display: inline-flex;
+
+  svg {
+    /* fill: currentColor; */
+    width: inherit;
+    height: inherit;
+    display: block;
+  }
+
+  //.svg-icon-outline {
+  //  /* fill: currentColor; */
+  //  stroke: currentColor !important;
+  //
+  //  svg,
+  //  path {
+  //    stroke: currentColor !important;
+  //  }
+  //}
+  //
+  //.svg-icon-solid {
+  //  /* fill: currentColor; */
+  //  fill: currentColor !important;
+  //
+  //  svg,
+  //  path {
+  //    fill: currentColor !important;
+  //  }
+  //}
+}

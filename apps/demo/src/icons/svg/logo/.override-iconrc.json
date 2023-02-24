@@ -1,0 +1,21 @@
+{
+  "prefix": "logo",
+  "svgoConfig": {
+    "plugins": [
+      {
+        "name": "removeAttrs",
+        "params": {
+          "attrs": ["width", "height", "fill"]
+        }
+      },
+      {
+        "name": "addAttributesToSVGElement",
+        "params": {
+          "attribute": {
+            "fill": "currentColor"
+          }
+        }
+      }
+    ]
+  }
+}

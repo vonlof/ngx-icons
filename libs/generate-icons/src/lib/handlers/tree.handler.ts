@@ -11,12 +11,12 @@ import {
   Statement,
 } from 'typescript';
 import { createExportDeclaration, createStatement } from './ast.handler';
-import * as camelcase from 'camelcase';
 import { readdirSync, readFileSync } from 'fs-extra';
 import { IconsConfig, OverridableIconConfig } from '../models/icons.config';
 import { logger } from '../logger';
 import { generateIconsConstants as constants } from '../constants';
 import { Dirent } from 'fs';
+import camelcase from 'camelcase';
 
 const printer = createPrinter({
   newLine: NewLineKind.LineFeed,

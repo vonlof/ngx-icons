@@ -1,5 +1,13 @@
 name: CI
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 concurrency:
   # Group concurrency on workflow, then:
   # - Is merge run? Group on branch name (`refs/heads/main`)
@@ -20,11 +28,6 @@ permissions:
   contents: read
   packages: write
 
-on:
-  pull_request:
-    branches:
-      - main
-
 jobs:
   main:
     runs-on: ubuntu-latest
@@ -37,6 +40,10 @@ jobs:
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
 
+      - name: Detect changed directories
+        uses: gagle/nx-check-changes@v1.0.0
+        id: nx-changes
+
       - name: Set up dependencies
         uses: ./.github/actions/setup-dependencies
 
@@ -48,3 +55,12 @@ jobs:
 
       - name: Test affected projects
         run: nx affected --target=build --parallel=3
+
+      - name: Deploy to GitHub Pages
+        if: success() && ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }}
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: dist/apps/demo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

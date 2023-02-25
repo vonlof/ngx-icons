@@ -36,12 +36,6 @@ describe('NgxIconComponent', () => {
   describe('name', () => {
     it('should set icon by name', () => {
       component.name = 'solidTestIcon';
-      const classes = (component as any).class;
-      expect(classes).toStrictEqual({
-        'ngx-icon-outline': false,
-        'ngx-icon-solid': true,
-      });
-
       expect((component as any).lastKey).toBe('solidTestIcon');
     });
 

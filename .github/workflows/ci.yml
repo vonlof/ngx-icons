@@ -53,14 +53,17 @@ jobs:
       - name: Test affected projects
         run: npx nx affected --target=test --parallel=3 --ci --code-coverage
 
-      - name: Test affected projects
-        run: npx nx affected --target=build --parallel=3
+      - name: Build affected projects
+        run: npx nx affected --target=build --prod --parallel=3
 
-      - name: Deploy to GitHub Pages
+      - name: Test check
+        run: ls -la
+
+      - name: Deploy demo to GitHub Pages
         if: success() && ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }}
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
-          build_dir: dist/apps/demo
+          build_dir: ./dist/apps/demo
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

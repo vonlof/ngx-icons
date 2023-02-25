@@ -1,0 +1,50 @@
+name: CI
+
+concurrency:
+  # Group concurrency on workflow, then:
+  # - Is merge run? Group on branch name (`refs/heads/main`)
+  # - Is pull request? Group on pull request branch name, for example `feat/add-awesome-feature`
+  group: >-
+    ${{ github.workflow }}-${{
+      github.event_name == 'push'
+        && github.ref
+        || github.head_ref
+    }}
+  # Run merge workflows in sequence to prevent parallel deployments and releases
+  # Cancel stale pull request runs in progress for the same branch
+  cancel-in-progress: ${{ github.event_name != 'push' }}
+
+permissions:
+  # Required by nrwl/nx-set-shas
+  actions: read
+  contents: read
+  packages: write
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
+
+      - name: Set up dependencies
+        uses: ./.github/actions/setup-dependencies
+
+      - name: Lint affected projects
+        run: nx affected --target=lint --parallel=3
+
+      - name: Test affected projects
+        run: nx affected --target=test --parallel=3 --ci --code-coverage
+
+      - name: Test affected projects
+        run: nx affected --target=build --parallel=3

@@ -2,7 +2,6 @@
   "srcPath": "./apps/demo/src/icons/svg",
   "outputPath": "./apps/demo/src/icons/generated",
   "barrel": true,
-  "suffix": "",
   "svgoConfig": {
     "plugins": [
       {

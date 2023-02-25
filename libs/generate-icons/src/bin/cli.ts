@@ -26,7 +26,7 @@ program
   )
   .option(
     '-c, --config <value>',
-    'Specify a config file f.e. /path/to/.icon.json.json'
+    'Specify a config file f.e. /path/to/.iconRC.json'
   )
   .option('-p, --prefix <value>', 'Specify a prefix for the icon')
   .option('-s, --suffix <value>', 'Specify a suffix for the icon')

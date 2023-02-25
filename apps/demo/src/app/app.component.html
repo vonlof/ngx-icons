@@ -1,6 +1,10 @@
 <nav class="py-5 border-b border-gray-800">
-  <div class="max-w-6xl mx-auto px-8 flex justify-end">
-    <a href="">
+  <div class="max-w-6xl mx-auto px-8 flex justify-end items-center">
+    <a
+      href="https://github.com/vonlof/ngx-icons"
+      class="hover:opacity-80 flex items-center"
+      target="_blank"
+    >
       <ngx-icon name="logo-github-mark" class="text-white h-5"></ngx-icon>
     </a>
   </div>
@@ -8,12 +12,9 @@
 <header
   class="py-20 w-full flex justify-center items-center border-b border-gray-800"
 >
-  <div class="text-center">
-    <h1
-      class="text-5xl pb-6 font-extrabold bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500"
-    >
-      ngx-icons
-    </h1>
+  <div class="text-center space-y-3">
+    <span class="text-gradient font-semibold">@vonlof/ngx-icons</span>
+    <h1 class="text-5xl pb-2 font-extrabold text-gradient">ngx-icons</h1>
     <p class="text-gray-50 max-w-xl text-lg">
       The all-in-one icon library for Angular. This allows you to generate and
       use icons from custom icon sets with a single icon component.
@@ -21,12 +22,50 @@
   </div>
 </header>
 <div class="max-w-6xl mx-auto p-8">
+  <div
+    class="border border-gray-800 rounded p-4 mb-4 grid grid-cols-3 gap-6 text-gray-400"
+  >
+    <div class="p-4 col-span-2">
+      <p>
+        In this demonstration, we are utilizing the meticulously crafted
+        Heroicons, created by the talented <a
+        class="hover:underline"
+        href="https://tailwindcss.com/"
+        target="_blank"
+      >TailwindCSS</a
+      > team. However, the
+        purpose of this package is to provide a straightforward tool for Angular
+        that allows you to easily use your own custom icons.
+      </p>
+    </div>
+    <a
+      class="flex items-center justify-center border border-gray-800 hover:bg-gray-800/30 rounded flex p-8"
+      href="https://heroicons.com/"
+      target="_blank"
+    >
+      <span class="flex-1 text-center text-xl font-semibold">
+        Heroicons
+      </span>
+      <ngx-icon name="solid-chevron-right" class="text-gray-400 h-6"></ngx-icon>
+    </a>
+  </div>
   <ul class="grid grid-cols-6 gap-4">
     <li
-      class="border border-gray-700 rounded p-4 flex items-center justify-center aspect-square hover:bg-gray-800"
+      class="border border-gray-800 rounded p-4 flex items-center justify-center aspect-square hover:bg-gray-800/30"
       *ngFor="let icon of icons"
     >
       <ngx-icon [name]="icon.name" class="text-gray-400 h-10"></ngx-icon>
     </li>
   </ul>
 </div>
+<footer
+  class="flex flex-col items-center justify-center py-10 border-t border-gray-800 space-y-2"
+>
+  <small class="text-xs text-gray-400"> Powered by </small>
+  <a
+    href="https://www.vonlof.com"
+    target="_blank"
+    class="font-black text-gray-300 text-3xl"
+  >VONLOF</a
+  >
+</footer>

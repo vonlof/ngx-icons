@@ -1,1 +1,7 @@
+:host {
+  @apply block min-h-screen;
+}
 
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500
+}

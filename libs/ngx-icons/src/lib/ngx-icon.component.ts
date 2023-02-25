@@ -48,12 +48,4 @@ export class NgxIconComponent {
     }
     this.template = this.sanitizer.bypassSecurityTrustHtml(icon);
   }
-
-  @HostBinding('class')
-  private get class() {
-    return {
-      'ngx-icon-outline': !!this.lastKey?.match(/outline/),
-      'ngx-icon-solid': !!this.lastKey?.match(/solid/),
-    };
-  }
 }

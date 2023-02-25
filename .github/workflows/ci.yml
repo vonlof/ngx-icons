@@ -25,11 +25,9 @@ concurrency:
 permissions:
   # Required by nrwl/nx-set-shas
   actions: read
-  contents: read
+  contents: write
   packages: write
   pages: write
-  id-token: write
-  repository-projects: write
 
 
 jobs:

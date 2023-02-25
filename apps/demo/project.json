@@ -17,7 +17,8 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
         "styles": ["apps/demo/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "baseHref": "/ngx-icons/"
       },
       "configurations": {
         "production": {

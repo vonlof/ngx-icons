@@ -64,7 +64,7 @@ jobs:
         run: ls -la
 
       - name: Deploy demo to GitHub Pages
-        if: success() && ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }}
+        if: ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }} && success()
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages

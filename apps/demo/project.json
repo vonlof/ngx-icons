@@ -17,11 +17,11 @@
         "inlineStyleLanguage": "scss",
         "assets": ["apps/demo/src/favicon.ico", "apps/demo/src/assets"],
         "styles": ["apps/demo/src/styles.scss"],
-        "scripts": [],
-        "baseHref": "/ngx-icons/"
+        "scripts": []
       },
       "configurations": {
         "production": {
+          "baseHref": "/ngx-icons/",
           "budgets": [
             {
               "type": "initial",

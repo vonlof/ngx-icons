@@ -14,13 +14,6 @@
         "assets": ["libs/generate-icons/*.md"]
       }
     },
-    "publish": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "node tools/scripts/publish.mjs generate-icons {args.ver} {args.tag}"
-      },
-      "dependsOn": ["build"]
-    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -40,6 +33,13 @@
           "ci": true,
           "codeCoverage": true
         }
+      }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx semantic-release-plus --extends ./libs/ngx-icons/release.config.js"
       }
     }
   },

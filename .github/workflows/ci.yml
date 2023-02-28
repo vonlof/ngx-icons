@@ -19,13 +19,13 @@ concurrency:
   # Run merge workflows in sequence to prevent parallel deployments and releases
   # Cancel stale pull request runs in progress for the same branch
   cancel-in-progress: ${{ github.event_name != 'push' }}
-
-permissions:
-  # Required by nrwl/nx-set-shas
-  actions: read
-  contents: write
-  packages: write
-  pages: write
+#
+#permissions:
+#  # Required by nrwl/nx-set-shas
+#  actions: write
+#  contents: write
+#  packages: write
+#  pages: write
 
 env:
   HUSKY: 0
@@ -34,13 +34,33 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out source code
-        uses: actions/checkout@v3
+#      - name: Check out source code
+#        uses: actions/checkout@v3
+#        with:
+#          fetch-depth: 0
+#
+#      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+#        uses: nrwl/nx-set-shas@v2
+
+      - name: Checkout [Pull Request]
+        uses: actions/checkout@v2
+        if: ${{ github.event_name == 'pull_request' }}
         with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Checkout [Default Branch]
+        uses: actions/checkout@v2
+        if: ${{ github.event_name != 'pull_request' }}
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
       - name: Derive appropriate SHAs for base and head for `nx affected` commands
         uses: nrwl/nx-set-shas@v2
+        with:
+          main-branch-name: ${{ github.base_ref }}
 
       - name: Detect changed directories
         uses: gagle/nx-check-changes@v1.0.0

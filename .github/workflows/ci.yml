@@ -5,6 +5,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 concurrency:
   # Group concurrency on workflow, then:

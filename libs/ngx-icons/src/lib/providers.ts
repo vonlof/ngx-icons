@@ -1,7 +1,7 @@
 /* istanbul ignore file */
 
 import { ENVIRONMENT_INITIALIZER, inject, InjectionToken } from '@angular/core';
-import {NgxIcon, NgxIconOptions} from './ngx-icon.interface';
+import { NgxIcon, NgxIconOptions } from './ngx-icon.interface';
 import { NgxIconRegistryService } from './ngx-icon-registry.service';
 
 export const ICON_OPTIONS = new InjectionToken<NgxIconOptions>('ICON_OPTIONS', {

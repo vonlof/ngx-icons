@@ -1,6 +1,23 @@
 {
   "name": "@vonlof/ngx-icons",
-  "version": "0.0.1",
+  "version": "0.0.0-semantic-release",
+  "description": "Custom svg icon component for Angular",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "angular",
+    "icons",
+    "svg"
+  ],
+  "author": {
+    "name": "Ivo Nederlof"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vonlof/ngx-icons.git",
+    "directory": "libs/ngx-icons"
+  },
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0"

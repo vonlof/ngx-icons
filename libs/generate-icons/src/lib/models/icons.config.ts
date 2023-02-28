@@ -7,6 +7,7 @@ interface IIconsConfig {
   barrel?: boolean;
   prefix?: string;
   suffix?: string;
+  overrideConfigName?: string;
   svgoConfig?: {
     plugins: PluginConfig[];
   };
@@ -19,7 +20,7 @@ export class IconsConfig {
   prefix = constants.DEFAULT_PREFIX;
   suffix = constants.DEFAULT_SUFFIX;
   svgoConfig = constants.DEFAULT_SVGO_CONFIG;
-  overrideConfigName = constants.DEFAULT_OVERRIDE_CONFIG_NAME
+  overrideConfigName = constants.DEFAULT_OVERRIDE_CONFIG_NAME;
 
   constructor(private config: IIconsConfig) {
     this.srcPath = config.srcPath;
@@ -27,8 +28,11 @@ export class IconsConfig {
     this.barrel = config.barrel || this.barrel;
     this.prefix = config.prefix || this.prefix;
     this.suffix = config.suffix || this.suffix;
+    this.overrideConfigName =
+      config.overrideConfigName || this.overrideConfigName;
+
     if (config.svgoConfig) {
-      this.svgoConfig = config.svgoConfig
+      this.svgoConfig = config.svgoConfig;
     }
     this.validateConfig();
   }
@@ -46,4 +50,6 @@ export class IconsConfig {
   }
 }
 
-export type OverridableIconConfig = Pick<IconsConfig, 'prefix' | 'suffix' | 'svgoConfig'> | undefined
+export type OverridableIconConfig =
+  | Pick<IconsConfig, 'prefix' | 'suffix' | 'svgoConfig'>
+  | undefined;

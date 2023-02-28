@@ -5,7 +5,7 @@ describe('Logger', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-  })
+  });
 
   it('should create instance', () => {
     const logger = new Logger();

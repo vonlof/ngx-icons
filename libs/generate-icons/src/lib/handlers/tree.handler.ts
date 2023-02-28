@@ -1,4 +1,4 @@
-import {optimize, PluginConfig} from 'svgo';
+import { optimize, PluginConfig } from 'svgo';
 import { basename, join } from 'path';
 import {
   createPrinter,
@@ -88,8 +88,11 @@ export function createTree(
         const svgPath = join(srcPath, dirent.name);
         const svgContent = readFileSync(svgPath).toString();
 
-        const plugins = getAndMergeSvgoPlugins(svgoConfig.plugins, overridableConfig?.svgoConfig.plugins);
-        svgoConfig = {...svgoConfig, ...overridableConfig?.svgoConfig};
+        const plugins = getAndMergeSvgoPlugins(
+          svgoConfig.plugins,
+          overridableConfig?.svgoConfig.plugins
+        );
+        svgoConfig = { ...svgoConfig, ...overridableConfig?.svgoConfig };
         svgoConfig.plugins = plugins || svgoConfig.plugins;
 
         const statement = createStatement({
@@ -150,12 +153,15 @@ function getOverrideConfig(
   return undefined;
 }
 
-function getAndMergeSvgoPlugins(current: PluginConfig[] = [], target?: PluginConfig[]) {
+function getAndMergeSvgoPlugins(
+  current: PluginConfig[] = [],
+  target?: PluginConfig[]
+) {
   if (target && current) {
     target.forEach((plugin: any) => {
       const indexOfP = current?.findIndex((p: any) => p.name === plugin.name);
       current[indexOfP] = plugin;
-    })
+    });
   }
   return current;
 }

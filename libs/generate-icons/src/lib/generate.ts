@@ -17,16 +17,12 @@ export async function generateIcons(
   options: GenerateIconCommandOptions | undefined
 ) {
   logger.level = options?.logger || 'info';
-  logger.info('Started SVG icon generator ...');
+  logger.info('Started icon generator ...');
 
   const config = await getConfigFromOptions(options);
-  if (!config) {
-    return logger.warn(
-      'You have not defined a config file, use the --src --output args or add a .icon.json.json'
-    );
-  }
-  logger.info('Source folder:', config.srcPath);
-  logger.info('Output folder:', config.outputPath);
+
+  logger.info('Source directory:', config.srcPath);
+  logger.info('Output directory:', config.outputPath);
 
   if (!config.barrel && fs.existsSync(config.outputPath)) {
     await removeOldIcons(config.outputPath);
@@ -87,29 +83,16 @@ function generateOneFileForIconsAndReturnNames(
 async function getConfigFromOptions(
   options: GenerateIconCommandOptions | undefined
 ) {
-  let config: IconsConfig | undefined = undefined;
-  if (options?.config) {
-    const configFilePath = resolve(options.config);
-    config = await promises.readFile(configFilePath).then(
-      (buffer) =>
-        new IconsConfig({
-          ...config,
-          ...JSON.parse(buffer.toString()),
-        })
+  if (!options?.config) {
+    throw new Error(
+      'You have not defined a config file, use the --c --config args. You can add a .iconrc.json'
     );
-    console.log(config)
   }
 
-  return Promise.resolve(
-    options?.src && options?.output
-      ? new IconsConfig({
-          ...config,
-          srcPath: options.src,
-          outputPath: options.output,
-          ...options,
-        })
-      : config
-  );
+  const configFilePath = resolve(options.config);
+  return promises
+    .readFile(configFilePath)
+    .then((buffer) => new IconsConfig(JSON.parse(buffer.toString())));
 }
 
 /**

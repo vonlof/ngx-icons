@@ -1,5 +1,5 @@
 import { inject, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
-import {NgxIcon, NgxIconOptions} from './ngx-icon.interface';
+import { NgxIcon, NgxIconOptions } from './ngx-icon.interface';
 import { ICON_OPTIONS } from './providers';
 
 @Injectable({

@@ -1,10 +1,3 @@
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-
 # NgxIcons: Bring Your Own Icons to Angular with Ease
 
 Are you tired of relying on the same old icons in your Angular projects? Look no further than NgxIcons! Our
@@ -37,8 +30,8 @@ directory you like), add a base config file (such as app/src/icons/.iconrc.json)
 
 ```json
 {
-  "srcPath": "./apps/demo/src/icons/svg",
-  "outputPath": "./apps/demo/src/icons/generated",
+  "srcPath": "./app/src/icons/svg",
+  "outputPath": "./app/src/icons/generated",
   "barrel": false,
   "svgoConfig": {
     "plugins": [

@@ -1,5 +1,22 @@
 {
-  "name": "@vonlof/generate-icon",
-  "version": "0.0.1",
-  "type": "commonjs"
+  "name": "@vonlof/generate-icons",
+  "version": "0.0.0-semantic-release",
+  "description": "Optimize and transform SVG files into compatible TS files",
+  "type": "commonjs",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "generate",
+    "icons",
+    "svg"
+  ],
+  "author": {
+    "name": "Ivo Nederlof"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vonlof/ngx-icons.git",
+    "directory": "libs/generate-icons"
+  }
 }

@@ -1,3 +1,3 @@
 # ngx-icons
 
-TODO
+TODO Documentation

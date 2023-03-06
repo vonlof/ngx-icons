@@ -5,6 +5,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main
 
 concurrency:
   # Group concurrency on workflow, then:
@@ -19,13 +21,12 @@ concurrency:
   # Run merge workflows in sequence to prevent parallel deployments and releases
   # Cancel stale pull request runs in progress for the same branch
   cancel-in-progress: ${{ github.event_name != 'push' }}
-#
-#permissions:
-#  # Required by nrwl/nx-set-shas
-#  actions: write
-#  contents: write
-#  packages: write
-#  pages: write
+
+permissions:
+  actions: write
+  contents: write
+  packages: write
+  pages: write
 
 env:
   HUSKY: 0
@@ -34,13 +35,6 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-#      - name: Check out source code
-#        uses: actions/checkout@v3
-#        with:
-#          fetch-depth: 0
-#
-#      - name: Derive appropriate SHAs for base and head for `nx affected` commands
-#        uses: nrwl/nx-set-shas@v2
 
       - name: Checkout [Pull Request]
         uses: actions/checkout@v2
@@ -83,11 +77,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: |
-          npx nx affected --target release
+        run: npx nx affected --target release
 
       - name: Deploy demo to GitHub Pages
-        if: ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }} && success()
+        if: success() && ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }}
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages

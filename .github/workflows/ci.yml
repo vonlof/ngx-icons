@@ -80,7 +80,7 @@ jobs:
         run: npx nx affected --target release
 
       - name: Deploy demo to GitHub Pages
-        if: success() && ${{ steps.nx-changes.outputs.changed-dirs == 'demo' }}
+        if: success() && contains(steps.nx-changes.outputs.changed-dirs, 'demo')
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages

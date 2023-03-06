@@ -3,6 +3,9 @@
   "version": "0.0.0-semantic-release",
   "description": "Optimize and transform SVG files into compatible TS files",
   "type": "commonjs",
+  "bin": {
+    "generate-icons": "./src/bin/cli.js"
+  },
   "publishConfig": {
     "access": "public"
   },

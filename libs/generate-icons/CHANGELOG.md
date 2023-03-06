@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.1...generate-icons-v1.0.2) (2023-03-06)
+
+
+### Bug Fixes
+
+* **generate-icons:** refactored contants ([d26bab5](https://github.com/vonlof/ngx-icons/commit/d26bab578517ceba46ae0a1b7ec6b9ba1990bace))
+* **generate-icons:** update default constant for typings generation ([fc818d9](https://github.com/vonlof/ngx-icons/commit/fc818d97caa0f9f767bcbdf630a7a35502d63e30))
+
 ## [1.0.1](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.0...generate-icons-v1.0.1) (2023-03-06)
 
 

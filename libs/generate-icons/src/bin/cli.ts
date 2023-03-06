@@ -6,10 +6,6 @@ import { LogLevel } from '../lib/utils/logger.util';
 import { logger } from '../lib/logger';
 
 const program = new Command();
-
-/**
- * Generate icons commands
- */
 program
   .command('generate-icons')
   .name('generate-icons')

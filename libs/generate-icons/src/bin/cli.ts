@@ -7,7 +7,6 @@ import { logger } from '../lib/logger';
 
 const program = new Command();
 program
-  .command('generate-icons')
   .name('generate-icons')
   .description('Transform SVG files into Angular-compatible TS files')
   .option(

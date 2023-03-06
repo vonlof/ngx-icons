@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "build:generate-icons:production": "nx build generate-icons --configuration=production",
-    "generate-icons": "npm run build:generate-icons:production && node ./dist/libs/generate-icons/src/bin/cli.js generate-icons --config apps/demo/src/icons/.iconrc.json --logger debug",
+    "generate-icons": "npm run build:generate-icons:production && node ./dist/libs/generate-icons/src/bin/cli.js --config apps/demo/src/icons/.iconrc.json --logger debug",
     "prepare": "husky install"
   },
   "private": true,

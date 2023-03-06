@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.0...generate-icons-v1.0.1) (2023-03-06)
+
+
+### Bug Fixes
+
+* **generate-icons:** added missing bin in package.json ([3cdf6f3](https://github.com/vonlof/ngx-icons/commit/3cdf6f32357ad1a4badb0a27257568eda44158e5))
+* minor change on ga permission ([3836214](https://github.com/vonlof/ngx-icons/commit/38362147cc81c09d01dd0a020db85d679bff84ed))
+
 # 1.0.0 (2023-03-06)
 
 ### Bug Fixes

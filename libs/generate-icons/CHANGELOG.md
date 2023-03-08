@@ -3,6 +3,15 @@
 
 ### Bug Fixes
 
+* **generate-icons:** fixed tests and updated ci parallel run ([c753880](https://github.com/vonlof/ngx-icons/commit/c7538804a1ea9402a792d31ae7fac249439c6413))
+* **generate-icons:** issue on ci for parallel run ([98e01c5](https://github.com/vonlof/ngx-icons/commit/98e01c53257ca2a7f92dd851e7cd343b039dd0f3))
+* renamed types interface, was a typo ([302804f](https://github.com/vonlof/ngx-icons/commit/302804fd649de288ffd6b49cb05918d96063ca25))
+
+## [1.0.3](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.2...generate-icons-v1.0.3) (2023-03-08)
+
+
+### Bug Fixes
+
 * renamed types interface, was a typo ([302804f](https://github.com/vonlof/ngx-icons/commit/302804fd649de288ffd6b49cb05918d96063ca25))
 
 ## [1.0.2](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.1...generate-icons-v1.0.2) (2023-03-06)

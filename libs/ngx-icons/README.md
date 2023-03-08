@@ -21,6 +21,8 @@ For a quick start please go [here](https://github.com/vonlof/ngx-icons)
 
 Getting started with NgxIcons is a breeze. Simply run the following command:
 
+Note: I strongly suggest to install the [@vonlof/generate-icons](https://github.com/vonlof/ngx-icons/blob/main/libs/generate-icons/README.md) first before you use this package.
+
 ```sh
   npm install @vonlof/ngx-icons
 ```

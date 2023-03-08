@@ -1,0 +1,13 @@
+{
+  "prefix": "static",
+  "svgoConfig": {
+    "plugins": [
+      {
+        "name": "removeAttrs",
+        "params": {
+          "attrs": ["width", "height"]
+        }
+      }
+    ]
+  }
+}

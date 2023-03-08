@@ -1,3 +1,4 @@
+![Alt banner](./banner.png?raw=true "NgxIcons")
 # NgxIcons
 ## Bring Your Own Icons to Angular with Ease
 Are you tired of relying on the same old icons in your Angular projects? Look no further than NgxIcons! This package
@@ -12,7 +13,7 @@ allows you to easily use your own custom icons in your Angular applications.
   - [Configure icon generator](#configure-icon-generator)
   - [Use ngx-icon component](#use-ngx-icon-component)
 - [Contributing](#contributing)
-- [License](#license)
+- [License](#license) 
 
 ## Installation
 

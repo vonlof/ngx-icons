@@ -10,6 +10,7 @@ import {
   outlineClipboard,
   outlineDocumentCheck,
   solidChevronRight,
+  staticLogo,
 } from '../icons/generated';
 
 @NgModule({
@@ -19,6 +20,7 @@ import {
     RouterModule.forRoot(routes),
     NgxIconModule.forRoot({
       icons: [
+        staticLogo,
         logoNpm,
         logoGithubMark,
         solidChevronRight,

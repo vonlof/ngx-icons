@@ -12,6 +12,7 @@ import { NgxIconComponent } from '@vonlof/ngx-icons';
 })
 export class StandaloneIconsComponent {
   icons = Object.values(DemoIcons).filter(
-    (icon) => !['logo-github-mark', 'logo-npm'].includes(icon.name)
+    (icon) =>
+      !['logo-github-mark', 'logo-npm', 'static-logo'].includes(icon.name)
   );
 }

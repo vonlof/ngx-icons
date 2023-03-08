@@ -1,6 +1,7 @@
 {
   "srcPath": "./apps/demo/src/icons/svg",
   "outputPath": "./apps/demo/src/icons/generated",
+  "overrideConfigName": ".iconrc.json",
   "barrel": true,
   "svgoConfig": {
     "plugins": [

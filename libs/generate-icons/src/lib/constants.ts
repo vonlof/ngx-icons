@@ -5,9 +5,9 @@ export const generateIconsConstants = {
   DEFAULT_BARREL: false,
   DEFAULT_PREFIX: '',
   DEFAULT_SUFFIX: '',
-  DEFAULT_OVERRIDE_CONFIG_NAME: '.override-iconrc.json',
+  DEFAULT_OVERRIDE_CONFIG_NAME: '.iconrc.json',
   DEFAULT_INDEX_BARREL_NAME: 'index.ts',
-  DEFAULT_TYPES_OUTPUT_NAME: 'NgxIconsTypes',
+  DEFAULT_TYPES_OUTPUT_NAME: 'NgxIconTypes',
   DEFAULT_TYPES_OUTPUT_PATH: 'node_modules/@vonlof/ngx-icons/lib/types.d.ts',
   DEFAULT_SVGO_CONFIG: {
     plugins: [

@@ -85,7 +85,7 @@ async function getConfigFromOptions(
 ) {
   if (!options?.config) {
     throw new Error(
-      'You have not defined a config file, use the --c --config args. You can add a .iconrc.json'
+      'You have not defined a config file, use the --c --config args. You can add a .base-iconrc.json'
     );
   }
 

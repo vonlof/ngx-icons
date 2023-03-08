@@ -19,7 +19,7 @@ Or, if you prefer yarn:
 ### Configure
 
 All you need to do is create a folder named ./app/src/icons (you can choose any
-directory you like), add a base config file (such as app/src/icons/.iconrc.json) with the following contents:
+directory you like), add a base config file (such as app/src/icons/.base-iconrc.json) with the following contents:
 
 ```json
 {
@@ -55,7 +55,7 @@ _For the svgo configuration please checkout the [svgo documentation](https://git
 Add your desired SVG to the app/src/icons/svg folder. Then, simply run:
 
 ```sh
-generate-icons --config app/src/icons/.iconrc.json
+generate-icons --config app/src/icons/.base-iconrc.json
 ```
 
 This will improve your SVG files and convert them to TypeScript files, making them even easier to work with.

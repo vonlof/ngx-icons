@@ -11,6 +11,7 @@ const solidTestIcon: {
 };
 
 describe('NgxIconRegistryService', () => {
+  const consoleSpy = jest.spyOn(console, 'warn').mockImplementation();
   let service: NgxIconRegistryService;
   const config: NgxIconOptions = {
     icons: [solidTestIcon],
@@ -45,7 +46,6 @@ describe('NgxIconRegistryService', () => {
 
   describe('get', () => {
     it('should return undefined when icon not found', () => {
-      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation();
       const icon = service.get('iconThatNotExist');
       expect(icon).toBeUndefined();
       expect(consoleSpy).toHaveBeenCalledWith(

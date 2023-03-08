@@ -1,17 +1,32 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { NgxIconComponent, provideIconOptions } from '@vonlof/ngx-icons';
-import * as DemoIcons from '../icons/generated';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { NgxIconModule } from '@vonlof/ngx-icons';
+import {
+  logoGithubMark,
+  logoNpm,
+  outlineClipboard,
+  outlineDocumentCheck,
+  solidChevronRight,
+} from '../icons/generated';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, NgxIconComponent],
-  bootstrap: [AppComponent],
-  providers: [
-    provideIconOptions({
-      icons: Object.values(DemoIcons),
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    NgxIconModule.forRoot({
+      icons: [
+        logoNpm,
+        logoGithubMark,
+        solidChevronRight,
+        outlineClipboard,
+        outlineDocumentCheck,
+      ],
     }),
   ],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -15,9 +15,6 @@ export class NgxIconRegistryService {
     this.configure();
   }
 
-  /**
-   * Get icons from the register
-   */
   get(name: string): string | undefined {
     const icon = this.svgMap.get(name);
     if (!icon) {

@@ -3,6 +3,11 @@ export const logoGithubMark = {
   name: 'logo-github-mark' as const,
 };
 
+export const logoNpm = {
+  data: `<svg viewBox="0 0 864 337" fill="currentColor"><path fill-rule="evenodd" d="M864 0v288.619H432.5V337H240.185v-48.381L0 288V0h864ZM480.041 48H288.208v240h96.75v-48.333h95.083V48Zm-240.208 0H48v191.667h95.917V96.333h47.541v143.334h48.375V48ZM817 48H528.417v191.667h95.082V96.333h49.21v143.334h47.54V96.333h48.376v143.334H817V48ZM431.666 96.333l.834 95h-47.541v-95h46.707Z"/></svg>`,
+  name: 'logo-npm' as const,
+};
+
 export const outlineAcademicCap = {
   data: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.905 59.905 0 0 1 12 3.493a59.902 59.902 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>`,
   name: 'outline-academic-cap' as const,

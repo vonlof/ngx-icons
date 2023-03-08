@@ -1,0 +1,8 @@
+<ul class="grid grid-cols-8 gap-4">
+  <li
+    class="border border-gray-800 text-gray-400 rounded p-4 flex items-center justify-center aspect-square hover:bg-gray-800/30"
+    *ngFor="let icon of icons"
+  >
+    <ngx-icon [name]="icon.name" class="h-6"></ngx-icon>
+  </li>
+</ul>

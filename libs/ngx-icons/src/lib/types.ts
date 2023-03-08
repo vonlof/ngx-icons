@@ -1,1 +1,1 @@
-export type NgxIconsTypes = string;
+export type NgxIconTypes = string;

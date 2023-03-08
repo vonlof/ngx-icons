@@ -73,14 +73,14 @@ jobs:
         run: npx nx affected --target=build --prod --parallel=3
 
       - name: Release
-        if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
+        if: ${{ success() && github.ref == 'refs/heads/main' && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx nx affected --target release
 
       - name: Deploy demo to GitHub Pages
-        if: success() && contains(steps.nx-changes.outputs.changed-dirs, 'demo')
+        if: success() && github.ref == 'refs/heads/main' && contains(steps.nx-changes.outputs.changed-dirs, 'demo')
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages

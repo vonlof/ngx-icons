@@ -11,7 +11,7 @@ program
   .description('Transform SVG files into Angular-compatible TS files')
   .option(
     '-c, --config <value>',
-    'Specify a config file f.e. /path/to/.iconrc.json'
+    'Specify a config file f.e. /path/to/.base-iconrc.json'
   )
   .option(
     '-l, --logger <value>',

@@ -9,7 +9,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { NgxIconsTypes } from './types';
+import { NgxIconTypes } from './types';
 import { NgxIconRegistryService } from './ngx-icon-registry.service';
 
 @Component({
@@ -29,7 +29,7 @@ export class NgxIconComponent {
 
   @HostBinding('attr.aria-hidden')
   private ariaHidden = true;
-  private lastKey: NgxIconsTypes | undefined;
+  private lastKey: NgxIconTypes | undefined;
 
   private readonly sanitizer = inject(DomSanitizer);
 
@@ -40,7 +40,7 @@ export class NgxIconComponent {
   ) {}
 
   @Input()
-  set name(key: NgxIconsTypes) {
+  set name(key: NgxIconTypes) {
     this.lastKey = key;
     const icon = this.registry.get(key);
     if (!icon) {

@@ -1,3 +1,5 @@
+![Alt banner](https://raw.githubusercontent.com/vonlof/ngx-icons/main/banner.png 'NgxIcons')
+
 # NgxIcons
 
 ## Bring your own icons to Angular with Ease

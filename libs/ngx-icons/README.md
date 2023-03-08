@@ -140,7 +140,7 @@ To change the size color etc. Just use classes/style directly on the component. 
 ### Inputs
 
 ```
-@Input() name: NgxIconsTypes;
+@Input() name: NgxIconTypes;
 ```
 
-NgxIconsTypes are the types located in `node_modules/@vonlof/ngx-icons/lib/types.d.ts`. These types wil be updated/generated if you use `@vonlof/generate-icons`
+NgxIconTypes are the types located in `node_modules/@vonlof/ngx-icons/lib/types.d.ts`. These types wil be updated/generated if you use `@vonlof/generate-icons`

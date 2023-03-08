@@ -1,6 +1,7 @@
 name: CI
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -77,7 +78,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx nx affected --target release
+        run: npx nx affected --target release --parallel=0
 
       - name: Deploy demo to GitHub Pages
         if: success() && github.ref == 'refs/heads/main' && contains(steps.nx-changes.outputs.changed-dirs, 'demo')

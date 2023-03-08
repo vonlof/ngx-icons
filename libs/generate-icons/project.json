@@ -37,7 +37,7 @@
     },
     "release": {
       "executor": "nx:run-commands",
-      "outputs": [],
+      "parallel": false,
       "options": {
         "command": "npx semantic-release-plus --extends ./libs/generate-icons/release.config.js"
       }

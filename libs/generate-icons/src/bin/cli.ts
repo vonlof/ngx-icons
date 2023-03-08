@@ -8,10 +8,10 @@ import { logger } from '../lib/logger';
 const program = new Command();
 program
   .name('generate-icons')
-  .description('Transform SVG files into Angular-compatible TS files')
+  .description('Transform SVG files into TS files')
   .option(
     '-c, --config <value>',
-    'Specify a config file f.e. /path/to/.base-iconrc.json'
+    'Specify a config file f.e. /app/src/icons/.base-iconrc.json'
   )
   .option(
     '-l, --logger <value>',

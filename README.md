@@ -51,8 +51,7 @@ as app/src/icons/.base-iconrc.json) with the following contents:
 ```json
 {
   "srcPath": "./app/src/icons/svg",
-  "outputPath": "./app/src/icons/generated",
-  "barrel": false,
+  "outputPath": "./app/src/icons/generated", 
   "svgoConfig": {
     "plugins": [
       {

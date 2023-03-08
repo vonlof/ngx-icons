@@ -1,11 +1,8 @@
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {
-  NgxIconComponent,
-  provideIconOptions,
-  provideIcons,
-} from '@vonlof/ngx-icons';
+import { provideIconOptions, provideIcons } from './providers';
 import { NgxIcon, NgxIconOptions } from './ngx-icon.interface';
+import { NgxIconComponent } from './ngx-icon.component';
 
 @NgModule({
   imports: [CommonModule, NgxIconComponent],

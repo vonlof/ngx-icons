@@ -2,6 +2,7 @@
   "name": "@vonlof/ngx-icons",
   "version": "0.0.0-semantic-release",
   "description": "Custom svg icon component for Angular",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },

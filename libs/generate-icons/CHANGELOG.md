@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.2...generate-icons-v1.0.3) (2023-03-08)
+
+
+### Bug Fixes
+
+* renamed types interface, was a typo ([302804f](https://github.com/vonlof/ngx-icons/commit/302804fd649de288ffd6b49cb05918d96063ca25))
+
 ## [1.0.2](https://github.com/vonlof/ngx-icons/compare/generate-icons-v1.0.1...generate-icons-v1.0.2) (2023-03-06)
 
 
